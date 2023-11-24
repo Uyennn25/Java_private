@@ -38,6 +38,7 @@ public class TacGia {
         tenTacGia = sc.nextLine();
         System.out.println("Nhap nam sinh: ");
         namSinh = sc.nextInt();
+        sc.nextLine();
     }
     public void output(){
         System.out.printf("%-15s %-15d%n", tenTacGia, namSinh );

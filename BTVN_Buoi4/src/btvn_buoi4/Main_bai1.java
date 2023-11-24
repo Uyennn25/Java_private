@@ -58,15 +58,13 @@ public class Main_bai1 {
     }
     public static void inThongTinSach(){
         System.out.println("=====Danh sách sách=======");
-        System.out.printf("%-10d %-15s %-15d %-15%s ", "id" , "ten Sach" , "nam Xuat Ban", "the Loai" ,"ten tac gia","nam sinh");
-        for(Sach sach : danhSachSach )
-            sach.output();
+        System.out.printf("%-10s %-15s %-15s %-15s %-15s %-15s%n ", "id" , "ten Sach" , "nam Xuat Ban", "the Loai" ,"ten tac gia","nam sinh");
+        for(int i = 0;i < 1;i++ )
+            danhSachSach[i].output();
     }
     public static void timKiemSachTheoTen(){
-        Scanner scanner = new Scanner(System.in);
-         scanner.nextLine();
         System.out.print("Nhap vao ten sach can tim: ");
-        String tenCanTim = scanner.nextLine();
+        String tenCanTim = (new Scanner(System.in)).nextLine();
 
         boolean timThay = false;
         for (int i = 0; i <= danhSachSach.length; i++) {

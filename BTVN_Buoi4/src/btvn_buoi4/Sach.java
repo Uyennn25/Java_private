@@ -10,9 +10,10 @@ public class Sach {
     private String tenSach;
     private int namXuatBan;
     private String theLoai;
-    private TacGia x;
+    private TacGia x = new TacGia();
     
     public Sach() {
+        this.id = ID++;
     }
 
     public Sach(int id, String tenSach, int namXuatBan, String theLoai, TacGia x) {
@@ -70,14 +71,17 @@ public class Sach {
         tenSach = sc.nextLine();
         System.out.println("Nhap nam xuat ban: ");
         namXuatBan = sc.nextInt();
+        sc.nextLine();
         System.out.println("Nhap the loai sach: ");
         theLoai = sc.nextLine();
-        x = new TacGia();
-        x.input();
+        TacGia y = new TacGia();
+        y.input();
+        setX(y);
+        
     }
    
     public void output(){
-        System.out.printf("%-10d %-15s %-15d %-15%s ", id , tenSach , namXuatBan, theLoai );
-        x.output();
+        System.out.printf("%-10d %-15s %-15d %-15s ", id , tenSach , namXuatBan, theLoai );
+        getX().output();
     }
 }
