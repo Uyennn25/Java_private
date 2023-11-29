@@ -5,10 +5,17 @@
  */
 package Bai2;
 
-/**
- *
- * @author ADMIN
- */
-public class StudentService {
+import java.util.List;
+
+interface StudentService {
+     void addStudent(Stundent stundent);
+
+    void deleteStudent(int id);
+
+    List<Stundent> searchStudent(String name);
+
+    void sortedStudent();
+
+    void showAllStudent();
     
 }
